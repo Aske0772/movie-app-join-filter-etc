@@ -128,7 +128,7 @@ function filterMovies() {
   //Vi filtrerer kun på periode, hvis der er valgt en specifik periode
   if (selectedValue != "Alle") {
     filterMovies = filterMovies.filter((item) => {
-      return item.periode === selectedValue;
+      return item.genre === selectedValue;
     });
   }
 
@@ -147,6 +147,10 @@ selectedCategory.addEventListener("change", filterMovies);
 // sætter addEventListener på variablen searchInput (søgefelt) som lytter på om værdien i søgefeltet ændres
 searchInput.addEventListener("input", filterMovies);
 
+form.addEventListener("submit", (event) => {
+event.preventDefault();
+filterExhibitions();
+});
 
 // ____
 
@@ -158,7 +162,6 @@ function displayMovies(movieList) {
   <!-- Her opbygger vi vores HTML-streng -->
    <article>
         <h2>${item.titel}</h2>
-        <h3></h3>
         <h3>${item.genre}</h3>
         <h3>${item.year}</h3>
         <p>${item.duration}</p>
