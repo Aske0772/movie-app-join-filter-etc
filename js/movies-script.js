@@ -127,10 +127,25 @@ function filterMovies() {
   // Alle betyder alle perioder
   //Vi filtrerer kun på periode, hvis der er valgt en specifik periode
   if (selectedValue != "Alle") {
-    filterExhibitions = filterExhibitions.filter((item) => {
+    filterMovies = filterMovies.filter((item) => {
       return item.periode === selectedValue;
     });
   }
+
+  if (searchTerm != "") {
+    filterMovies = filterMovies.filter((item) => {
+      return item.udstillingsnavn.toLowerCase().includes(searchTerm);
+    });
+  }
+
+  displayMovies(displayMovies);
+}
+
+// sætter addEventListener på variablen selectedCategory (dropdown mneu) som lytter på om værdien i dropdown-menuen ændres
+selectedCategory.addEventListener("change", filterMovies);
+
+// sætter addEventListener på variablen searchInput (søgefelt) som lytter på om værdien i søgefeltet ændres
+searchInput.addEventListener("input", filterMovies);
 
 
 // ____
