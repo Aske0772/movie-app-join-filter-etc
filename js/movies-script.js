@@ -114,6 +114,27 @@ const form = document.querySelector("form")
 Her opretter jeg en funktion, som skal vise udstillingerne i browseren.
 Funktionen modtager en liste med udstillinger som parameter.
 */
+function filterMovies() {
+  // Henter den valgte periode(kategori) fra dropdown
+  const selectedValue = selectedCategory.value;
+
+  // Henter søge teksen fra søge feltet og laver indholdet til små bogstaver og fjerner mellemrum efter søgeteksten
+  const searchTerm = searchInput.value.toLowerCase().trim();
+
+  // vi starter med alle udstillinger fra listen (array)
+  let filterMovies = movies;
+
+  // Alle betyder alle perioder
+  //Vi filtrerer kun på periode, hvis der er valgt en specifik periode
+  if (selectedValue != "Alle") {
+    filterExhibitions = filterExhibitions.filter((item) => {
+      return item.periode === selectedValue;
+    });
+  }
+
+
+// ____
+
 function displayMovies(movieList) {
   // Her opbygger vi et nyt array/liste ved at bruge map() baseret på vores exhibitions-array/liste
 
