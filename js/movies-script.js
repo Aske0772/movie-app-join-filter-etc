@@ -126,7 +126,7 @@ function filterMovies() {
 
   // Alle betyder alle perioder
   //Vi filtrerer kun på periode, hvis der er valgt en specifik periode
-  if (selectedValue != "Alle") {
+  if (selectedValue != "alle") {
     filterMovies = filterMovies.filter((item) => {
       return item.genre === selectedValue;
     });
@@ -138,7 +138,7 @@ function filterMovies() {
     });
   }
 
-  displayMovies(displayMovies);
+  displayMovies(filterMovies);
 }
 
 // sætter addEventListener på variablen selectedCategory (dropdown mneu) som lytter på om værdien i dropdown-menuen ændres
