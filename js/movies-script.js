@@ -149,7 +149,7 @@ searchInput.addEventListener("input", filterMovies);
 
 form.addEventListener("submit", (event) => {
 event.preventDefault();
-filterExhibitions();
+filterMovies();
 });
 
 // ____
