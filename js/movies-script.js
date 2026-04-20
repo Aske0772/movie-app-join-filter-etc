@@ -134,7 +134,7 @@ function filterMovies() {
 
   if (searchTerm != "") {
     filterMovies = filterMovies.filter((item) => {
-      return item.udstillingsnavn.toLowerCase().includes(searchTerm);
+      return item.titel.toLowerCase().includes(searchTerm);
     });
   }
 
