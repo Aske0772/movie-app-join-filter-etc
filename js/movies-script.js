@@ -106,9 +106,9 @@ url: "https://www.imdb.com/title/tt0110912/"
 
 
 const moviesContainer = document.querySelector("#movies-container");
-const selectedCategory = document.querySelector()
-const searchInput = document.querySelector()
-const form = document.querySelector()
+const selectedCategory = document.querySelector("#category-select");
+const searchInput = document.querySelector("#gsearch");
+const form = document.querySelector("form");
 /*
 Her opretter jeg en funktion, som skal vise udstillingerne i browseren.
 Funktionen modtager en liste med udstillinger som parameter.
