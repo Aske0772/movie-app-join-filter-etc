@@ -21,6 +21,18 @@ body {
     justify-content: center;
 }
 
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 8px;
+}
+
 /* Her styler jeg hvert article-element som et lille kort */
 #movies-container article {
     background-color: white;
